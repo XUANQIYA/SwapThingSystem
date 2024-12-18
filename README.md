@@ -1,9 +1,8 @@
 
 
 <img src="https://s01.mifile.cn/i/logo-footer.png?v2">
-## 东211摆子项目
 
-## 小米官网制作
+## 小米官网制作(东211摆子项目)
 
 https://www.mi.com/
  
