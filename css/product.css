@@ -1,0 +1,89 @@
+.product-detail-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 修改为 stretch 以确保子元素高度一致 */
+    margin: 0 70px; /* 左右各20像素的距离 */
+    padding: 20px; /* 可选：添加内边距以便内容不紧贴边框 */
+    border-radius: 16px; /* 添加圆角 */
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+}
+
+.product-details-wrap {
+    width: 50%; /* 根据需要调整宽度 */ /* 添加边框 */
+    padding: 20px; /* 可选：添加内边距以便内容不紧贴边框 */
+}
+
+.product-image-wrap {
+    width: 45%; /* 根据需要调整宽度 */ /* 添加边框 */
+    padding: 20px; /* 可选：添加内边距以便内容不紧贴边框 */
+}
+
+.layui-carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.layui-carousel img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 65px auto 0 auto;
+}
+
+.product-description h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-description p {
+    margin-bottom: 10px;
+}
+
+.product-actions button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.product-actions button:hover {
+    background-color: #0056b3;
+}
+
+.product-specs {
+    margin-top: 20px; /* 根据需要调整间距 */
+    padding: 20px;
+}
+
+.product-specs h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-specs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-specs li {
+    margin-bottom: 5px;
+}
+
+.price {
+    line-height: 45px;
+    margin: 17px 0 0;
+    color: #ff6700;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.desc {
+    line-height: 22px;
+    min-height: 44px;
+    margin: 40px 0 0;
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 13px;
+}
