@@ -2,7 +2,7 @@
 
 <img src="https://s01.mifile.cn/i/logo-footer.png?v2">
 
-## 小米官网制作(东211摆子项目)
+## 小米官网制作(东211摆子项目吱吱吱吱)
 
 https://www.mi.com/
  
