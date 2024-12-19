@@ -375,7 +375,7 @@
 
 .phone .phone-8 li img {
     width: 160px;
-    height: 160px;
+    height: 180px;
     margin: 0px 37px 18px 37px;
 }
 
@@ -384,19 +384,35 @@
 }
 
 .main-page .desc {
-    margin: 0 10px 10px;
-    min-height: 20px;
-    height: 18px;
-    font-size: 12px;
-    color: #b0b0b0;
+    min-height: 32px;
+    height: 32px;
+    font-size: 16px;
+    color: #333;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
+.phone .phone-8 li .xinxi{
+    display: inline-block;
+    width:48%;
+    height:20px;
+}
+.phone .phone-8 .xinxi .fabutime{
+    right:0px;
+    height: 18px;
+    text-align: right;
+    font-size: 14px;
+    color: #b0b0b0; 
+    margin-bottom:5px;
+}
 .main-page .price {
-    margin: 0 10px 14px;
-    text-align: center;
-    font-size: 18px;
+    margin-left: 8px;
+    margin-bottom:5px;
+    text-align: left;
+    font-size: 14px;
     font-weight: normal;
     color: #ff6700;
+    line-height: 20px;
+    margin-top: 20px;
 }
 
 .collect-card {
@@ -408,119 +424,6 @@
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
 }
-
-.jiadian-more {
-    float: right;
-    padding: 16px 0 0;
-    font-size: 16px;
-}
-
-.jiadian-more a {
-    margin-left: 10px;
-    padding-bottom: 5px;
-}
-
-.jiadian .box-8-left {
-    width: 234px;
-    height: 614px;
-    float: left;
-}
-
-.jiadian .box-8-left img {
-
-    width: 234px;
-    height: 300px;
-}
-
-.jiadian .box-8-left img:first-child {
-    margin-bottom: 14px;
-}
-
-.jiadian .box-8 ul {
-    height: 614px;
-}
-
-.jiadian .box-8 li {
-    float: left;
-    width: 234px;
-    height: 260px;
-    background: #fff;
-    margin-left: 14px;
-    padding: 20px 0;
-    transition: all .2s linear;
-}
-
-.jiadian .box-8 li:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transform: translate3d(0, -5px, 0);
-}
-
-.jiadian .box-8 li img {
-    width: 160px;
-    height: 160px;
-    margin: 0px 37px 18px 37px;
-}
-
-.jiadian .box-8 .down {
-    margin-top: 14px;
-}
-
-.intelligence-more {
-    float: right;
-    padding: 16px 0 0;
-    font-size: 16px;
-}
-
-.intelligence-more a {
-    margin-left: 10px;
-    padding-bottom: 5px;
-}
-
-.intelligence .box-8-left {
-    width: 234px;
-    height: 614px;
-    float: left;
-}
-
-.intelligence .box-8-left img {
-
-    width: 234px;
-    height: 300px;
-}
-
-.intelligence .box-8-left img:first-child {
-    margin-bottom: 14px;
-}
-
-.intelligence .box-8 ul {
-    height: 614px;
-}
-
-.intelligence .box-8 li {
-    float: left;
-    width: 234px;
-    height: 260px;
-    background: #fff;
-    margin-left: 14px;
-    padding: 20px 0;
-    transition: all .2s linear;
-}
-
-.intelligence .box-8 li:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transform: translate3d(0, -5px, 0);
-}
-
-.intelligence .box-8 li img {
-    width: 160px;
-    height: 160px;
-    margin: 0px 37px 18px 37px;
-}
-
-.intelligence .box-8 .down {
-    margin-top: 14px;
-}
-
 .collocation-more {
     float: right;
     padding: 16px 0 0;
