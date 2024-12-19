@@ -722,3 +722,20 @@
     height: 180px;
     width: 296px;
 }
+
+.search-text {
+    height: 36px; /* 设置与按钮相同的高度 */
+    padding: 7px 9.9px; /* 调整内边距以确保一致的外观 */
+    border: 1px solid #ccc;
+    border-radius: 32px 0 0 32px; 
+    outline: none;
+}
+
+.search-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: black;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 0 32px 32px 0; 
+}
