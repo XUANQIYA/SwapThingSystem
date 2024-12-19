@@ -208,11 +208,12 @@ a:hover {
 }
 
 .nav-hover .category-children {
-    display: none;
+
+    visibility: hidden;
 }
 
 .nav-hover:hover .category-children {
-    display: block;
+    visibility: visible;
 }
 
 .search-text {
