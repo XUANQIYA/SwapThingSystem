@@ -1,11 +1,19 @@
+
+
+.main {
+    margin: auto;
+    background: #f5f5f5;
+}
+
 .product-detail-page {
     display: flex;
     justify-content: space-between;
     align-items: stretch; /* 修改为 stretch 以确保子元素高度一致 */
-    margin: 0 70px; /* 左右各20像素的距离 */
+    margin: 0 60px; /* 左右各20像素的距离 */
     padding: 20px; /* 可选：添加内边距以便内容不紧贴边框 */
-    border-radius: 16px; /* 添加圆角 */
+    border-radius: 10px; /* 统一圆角大小 */
     background-color: #ffffff; /* 设置背景颜色为白色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影以增强区分 */
 }
 
 .product-details-wrap {
@@ -86,4 +94,108 @@
     margin: 40px 0 0;
     color: rgba(51, 51, 51, 0.7);
     font-size: 13px;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+
+
+
+.main-page {
+    background-color: #ffffff; /* 统一背景颜色 */
+    padding-top: 60px;
+    margin: 40px 60px;
+    border-radius: 10px; /* 统一圆角大小 */
+    padding: 60px 20px; /* 增加内边距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 统一阴影样式 */
+}
+
+.main-page .title {
+    display: block;
+}
+
+.main-page .title h2 {
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+    float: left;
+    margin-top: -25px;
+}
+
+.main-page h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+}
+
+
+.phone .phone-8 ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.phone .phone-8 li {
+    float: none;
+    width: calc((100% / 5) - 14px); /* 假设每行显示5个元素 */
+    height: 300px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 0;
+    transition: all .2s linear;
+}
+
+.phone .phone-8 li:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, -5px, 0);
+    outline:1px solid #c0c0c0;
+}
+
+.phone .phone-8 li img {
+    width: 160px;
+    height: 180px;
+    margin: 0px 37px 18px 37px;
+}
+
+.phone .phone-8 .down {
+    margin-top: 14px;
+}
+
+.main-page .desc {
+    min-height: 32px;
+    height: 32px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 8px;
+}
+.phone .phone-8 li .xinxi{
+    display: inline-block;
+    width:45%;
+    height:20px;
+    margin-top: 10px;
+}
+.phone .phone-8 .xinxi .fabutime{
+    right:0px;
+    height: 18px;
+    text-align: right;
+    font-size: 12px;
+    color: #b0b0b0; 
+    margin-bottom:5px;
+}
+.main-page .price {
+    margin-left: 8px;
+    margin-bottom:5px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    color: #ff6700;
+    line-height: 20px;
+    margin-top: 20px;
 }
