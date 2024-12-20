@@ -230,7 +230,7 @@ a:hover {
     width: 52px;
     height: 52px;
     border: 1px solid #e0e0e0;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
     background-color: #fff;
     color: #616161;
@@ -641,4 +641,21 @@ a:hover {
 .view-category i {
     float: right;
     margin-right: 20px;
+}
+
+.search-text {
+    height: 36px; /* 设置与按钮相同的高度 */
+    padding: 7px 9.9px; /* 调整内边距以确保一致的外观 */
+    border: 1px solid #ccc;
+    border-radius: 32px 0 0 32px; 
+    outline: none;
+}
+
+.search-btn {
+    background-color: #1E9FFF;
+    border: 1px solid #ccc;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 0 32px 32px 0; 
 }
