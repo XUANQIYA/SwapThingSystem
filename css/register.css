@@ -2,7 +2,8 @@ body {
     overflow-y: auto;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -13,53 +14,56 @@ body {
 
 body {
     font-size: 14px;
-    font-family: arial,"Hiragino Sans GB", "Microsoft YaHei","微軟正黑體","儷黑 Pro", sans-serif;
+    font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
 }
+
 .milogo {
-    width: 49px;
-    height: 48px;
+    width: 29px;
+    height: 28px;
     margin: 0 auto;
     display: block;
     cursor: default;
 }
 
-h3.tit-mi{
+h3.tit-mi {
     font-size: 30px;
     font-weight: normal;
     color: #333;
     line-height: 1;
-    margin:5px;
+    margin: 5px;
     text-align: center;
 }
 
-.main2{
+.main2 {
     padding-bottom: 30px;
     border: none;
     border-radius: 0;
     padding-top: 0;
 }
-.main1{
+
+.main1 {
     background: #fff;
     padding: 34px 34px 0;
     min-height: 200px;
-    margin:0px;
+    margin: 0px;
 }
 
-.z-main{
+.z-main {
     line-height: 20px;
     width: 332px;
     padding: 5px 0;
     line-height: 20px;
     margin: 0 auto;
 }
-h5.c-country{
-    font-size:15px;
-    padding:0px 0;
-    margin:0px;
+
+h5.c-country {
+    font-size: 15px;
+    padding: 0px 0;
+    margin: 0px;
     font-weight: normal;
 }
 
-.r-box{
+.r-box {
     height: 40px;
     padding-left: 14px;
     line-height: 40px;
@@ -70,13 +74,14 @@ h5.c-country{
     cursor: pointer;
 }
 
-.r-box-m{
+.r-box-m {
     float: left;
     width: 315px;
     border-right: 1px solid #e8e8e8;
     cursor: pointer;
 }
-p{
+
+p {
     margin: 0;
     padding: 0;
     display: block;
@@ -84,13 +89,14 @@ p{
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
-    line-height:90%
+    line-height: 90%
 }
 
-.r-box-m-w{
-    float:left;
+.r-box-m-w {
+    float: left;
 }
-.select{
+
+.select {
     float: right;
     background: url("../img/出行儿童/icon_user (1).png");
     width: 16px;
@@ -98,11 +104,12 @@ p{
     margin: 11px 15px 0 12px;
 }
 
-.explain{
+.explain {
     margin-top: 10px;
     margin-bottom: 15px;
 }
-h4.phone-e{
+
+h4.phone-e {
     padding-bottom: 5px;
     color: #333;
     font-weight: normal;
@@ -110,7 +117,7 @@ h4.phone-e{
     margin: 0px;
 }
 
-.phone-m{
+.phone-m {
     width: 54px;
     text-align: center;
     padding: 0 9px;
@@ -122,13 +129,14 @@ h4.phone-e{
     border: 1px solid #e8e8e8;
     color: #555;
     cursor: pointer;
-    float:left;
+    float: left;
 }
-.phone-b3{
+
+.phone-b3 {
     zoom: 1;
 }
 
-p.phone-h{
+p.phone-h {
     border-right: 0 none;
     float: left;
     width: 30px;
@@ -139,7 +147,7 @@ p.phone-h{
     line-height: 40px;
 }
 
-i.select2{
+i.select2 {
     float: right;
     margin: 17px 0 0 10px;
     width: 0;
@@ -150,13 +158,14 @@ i.select2{
     border-style: solid;
     border-color: #9d9d9d transparent transparent transparent;
 }
-.input-b{
+
+.input-b {
     float: right;
     padding-bottom: 15px;
-    width:255px;
+    width: 255px;
 }
 
-.label-b{
+.label-b {
     margin-left: -1px;
     position: relative;
     z-index: 3;
@@ -164,18 +173,24 @@ i.select2{
     line-height: 40px;
     display: inline-block;
     border-image: initial;
-    float:right;
+    float: right;
     width: 255px;
 }
 
-input.word{
+input.word {
     outline: #ff6700;
-    width:255px;
+    width: 255px;
     height: 40px;
     border-width: 0px;
 }
 
-.submit-1{
+.buttonCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-1 {
     background-color: rgb(255, 103, 0);
     margin-top: 15px;
     color: rgb(255, 255, 255);
@@ -183,12 +198,12 @@ input.word{
     border-style: solid;
     border-color: rgba(186, 186, 186, 0.3);
     border-image: initial;
-    width:330px;
+    width: 353.33px;
     height: 45px;
 }
 
 
-.select3{
+.select3 {
     width: 17px;
     height: 17px;
     margin-right: 5px;
@@ -200,26 +215,28 @@ input.word{
 
 }
 
-.footer-1{
+.footer-1 {
     text-align: center;
-    padding:5px;
+    padding: 5px;
     margin: 20px;
 }
 
-.footer-1-m{
+
+.footer-1-m {
     cursor: pointer;
     display: inline-block;
     padding: 10px 0px;
 }
-.agreement-t{
+
+.agreement-t {
     font-weight: bold;
 }
 
-.agreement-y{
+.agreement-y {
     font-weight: bold;
 }
 
-.s-language{
+.s-language {
     width: 1250px;
     height: 30px;
     line-height: 40px;
@@ -227,9 +244,10 @@ input.word{
     margin: 20px;
 }
 
-.s-language-a{
+.s-language-a {
     text-align: center;
 }
+
 li {
     width: 80px;
     height: 19px;
@@ -241,7 +259,7 @@ li {
     text-align: center;
 }
 
-.nf-intro{
+.nf-intro {
     text-align: center;
     margin: 20px;
 }
