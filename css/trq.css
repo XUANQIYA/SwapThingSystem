@@ -560,3 +560,20 @@ a:hover {
     height: 19px;
     background: url("../img/小米手机/slogan2016.png") no-repeat center 0;
 }
+
+.search-text {
+    height: 36px; /* 设置与按钮相同的高度 */
+    padding: 7px 9.9px; /* 调整内边距以确保一致的外观 */
+    border: 1px solid #ccc;
+    border-radius: 32px 0 0 32px; 
+    outline: none;
+}
+
+.search-btn {
+    background-color: #1E9FFF;
+    border: 1px solid #ccc;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 0 32px 32px 0; 
+}
