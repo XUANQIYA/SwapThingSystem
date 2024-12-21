@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>二手交换平台</title>
+	<link rel="stylesheet" href="./css/fabu.css">
+	<link rel="stylesheet" href="./css/Router.css">
+
+	<script src="css/layui/layui.js"></script>
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/jyc.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<!--头部-->
+	<div class="header">
+		<div class="topbar">
+			<div class="wrap">
+				<div class="topbar-left">
+					<a>闲置物品交换分析平台</a><span>|</span>
+				</div>
+				<div class="topbar-right">
+					<a href="views/Account.html" id="login">登录</a><span>|</span>
+					<a href="views/miregister.html" id="register">注册</a><span>|</span>
+					<a href="views/Personal_central.html" id="dd">个人中心</a><span>|</span>
+				</div>
+			</div>
+		</div>
+		<div class="navwrap">
+		<div class="exchange-form-container">
+			<h2>发布交换物品</h2>
+			<form action="#" method="POST">
+				<div class="form-group">
+					<label for="itemName">物品名称</label>
+					<input type="text" id="itemName" name="itemName" placeholder="请输入物品名称" required>
+				</div>
+	
+				<div class="form-group">
+					<label for="itemDescription">物品描述</label>
+					<textarea id="itemDescription" name="itemDescription" placeholder="请输入物品描述" required></textarea>
+				</div>
+	
+				<div class="form-group">
+					<label for="category">物品类别</label>
+					<select id="category" name="category" required>
+						<option value="electronics">电子产品</option>
+						<option value="books">书籍</option>
+						<option value="clothing">衣物</option>
+						<option value="furniture">家具</option>
+						<option value="others">其他</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<button type="submit">发布交换请求</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+			</div>
+			<div style="height: 40px;"></div>
+		</div>
+</body>
+<script>
+	layui.use('carousel', function () {
+		var carousel = layui.carousel;
+		//建造实例
+		carousel.render({
+			elem: '#home-carousel'
+			, width: '100%' //设置容器宽度
+			, height: '460px'
+			, arrow: 'always' //始终显示箭头
+			//,anim: 'updown' //切换动画方式
+
+		});
+	});
+</script>
+
+</html>
