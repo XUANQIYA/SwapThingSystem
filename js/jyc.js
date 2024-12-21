@@ -1,64 +1,65 @@
-document.querySelector('.tableBtn').addEventListener('click', function (event) {
-    event.preventDefault(); // 阻止表单的默认提交行为
+// 等待DOM加载完成
+document.addEventListener('DOMContentLoaded', function () {
+    // 获取登录按钮
+    const loginBtn = document.getElementById('loginBtn');
 
-    // 获取用户输入的账号和密码
-    var username = document.getElementById('userName').value;
-    var password = document.querySelector('input[name="password"]').value;
+    if (loginBtn) {
+        loginBtn.addEventListener('click', function (event) {
+            event.preventDefault();
 
-    // 获取存储的用户数据
-    var users = JSON.parse(localStorage.getItem('users')) || [];
+            // 获取用户输入
+            var username = document.getElementById('userName').value;
+            var password = document.querySelector('input[name="password"]').value;
 
-    // 验证用户信息
-    var userFound = users.find(function (user) {
-        return user.username === username && user.password === password;
-    });
+            if (!username || !password) {
+                alert('请输入用户名和密码！');
+                return;
+            }
 
-    if (userFound) {
-        alert('登录成功！');
+            // 从localStorage获取用户数据
+            var users = JSON.parse(localStorage.getItem('users')) || [];
 
-        // 更新登录按钮文本和链接
-        $("#login").text(userFound.nickname);
-        $("#login").attr("href", "../views/Personal_central.html");
-        $("#register").attr("href", "../views/xiaoxi.html");
+            // 查找用户
+            var user = users.find(function (user) {
+                return user.username === username && user.password === password;
+            });
 
-        // 登录成功后跳转到主页或其他页面
-        window.location.href = '../index.html';
-    } else {
-        alert('账号或密码错误，请重新输入');
+            if (user) {
+                // 登录成功
+                alert('登录成功！');
+                // 存储登录状态和用户信息
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                localStorage.setItem('isLoggedIn', 'true');
+                // 跳转到首页
+                window.location.href = '../index.html';
+            } else {
+                // 登录失败
+                alert('用户名或密码错误！');
+            }
+        });
     }
 });
 
+// index.html 页面加载完成后执行的代码
 $(document).ready(function () {
-    $("#topbar-cart").hover(function () {
-        $("#load").slideToggle("fast");
-    });
+    // 检查登录状态
+    var isLoggedIn = localStorage.getItem('isLoggedIn');
+    var currentUser = localStorage.getItem('currentUser');
 
-    var xx = $.getUrlParam('id');
-    console.log(xx);
-
-    if (xx != null) {
-        flag = 1;
-        $("#login").text("admin");
+    if (isLoggedIn === 'true' && currentUser) {
+        currentUser = JSON.parse(currentUser);
+        // 更新顶部栏
+        $("#login").text(currentUser.nickname);
         $("#register").text("消息通知");
-        $("#dd").text("我的订单");
-        $("#login").attr("href", "../views/Personal_central.html");
-        $("#register").attr("href", "../views/xiaoxi.html");
+        $("#dd").text("个人中心");
+        $("#login").attr("href", "views/Personal_central.html");
+        $("#register").attr("href", "views/xiaoxi.html");
     }
 });
 
-function navallOver() {
-    document.getElementById("navbar").style.display = "block";
+// 退出登录函数
+function logout() {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('currentUser');
+    window.location.href = '../index.html';
 }
-
-function navallOut() {
-    document.getElementById("navbar").style.display = "none";
-}
-
-(function ($) {
-    $.getUrlParam = function (name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return unescape(r[2]);
-        return null;
-    }
-})(jQuery);
