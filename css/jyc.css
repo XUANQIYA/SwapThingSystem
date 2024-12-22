@@ -218,24 +218,29 @@ a:hover {
 
 .search-text {
     width: 223px;
-    height: 50px;
+    height: 48px;
     padding: 0 10px;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #e0e0e0;
+    border-right: none;
     font-size: 14px;
     line-height: 48px;
     float: left;
+    border-radius: 32px 0 0 32px;
 }
 
 .search-btn {
     width: 52px;
     height: 52px;
     border: 1px solid #e0e0e0;
+    border-left: none;
     font-size: 16px;
     line-height: 24px;
-    background-color: #fff;
+    background-color: #1E9FFF;
     color: #616161;
     float: right;
+    border-radius: 0 32px 32px 0
 }
+
 
 .layui-carousel img {
     height: 620px;
@@ -643,22 +648,6 @@ a:hover {
     margin-right: 20px;
 }
 
-.search-text {
-    height: 36px; /* 设置与按钮相同的高度 */
-    padding: 7px 9.9px; /* 调整内边距以确保一致的外观 */
-    border: 1px solid #ccc;
-    border-radius: 32px 0 0 32px; 
-    outline: none;
-}
-
-.search-btn {
-    background-color: #1E9FFF;
-    border: 1px solid #ccc;
-    color: white;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 0 32px 32px 0; 
-}
 
 a {
     color: #000; /* 黑色 */
