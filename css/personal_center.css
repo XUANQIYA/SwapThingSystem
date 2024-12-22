@@ -2,6 +2,7 @@
     width:1226px;
     margin-right: auto;
     margin-left: auto;
+    overflow-x: hidden;
 }
 
 .span4{
@@ -65,6 +66,7 @@
     justify-content: space-evenly;
     align-items: center;
     margin-top: 100px;
+    font-size: 20px;
 }
 
 .profile-info {
@@ -117,7 +119,7 @@ p {
 
 .item-section {
     background-color: #fff;
-    padding: 20px;
+    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: calc(25% - 15px); /* 调整宽度以适应四列布局 */
