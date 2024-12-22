@@ -48,8 +48,8 @@ font-weight:normal;
 .row-center{
     float: right;
     background-color:#fff;
-    width:900px;
-    height:250px;
+    width:880px;
+    height:700px;
 }
 .pingjia{
     border-bottom: #dedede;
@@ -91,7 +91,23 @@ font-weight:normal;
 .shoucang{
     margin-top: 70px;
     text-align: center;
+}
 
+.message-list {
+    margin-top: 70px; /* 添加一些顶部间距 */
+}
+
+.message-item {
+    margin-bottom: 10px;
+}
+
+.message-content {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message-time {
+    color: #696969;
 }
 
 
