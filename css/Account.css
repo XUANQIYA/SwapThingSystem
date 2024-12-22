@@ -6,8 +6,8 @@
 
 .h_logo {
     width: 200px;
-    height: 98px;
-    background: url(https://account.xiaomi.com/static/res/7f6f2f5/account-static/respassport/acc-2014/img/mistore_logo.png) no-repeat;
+    height: 200px;
+    background: url(../img/小米手机/logo-footer.png);
 }
 
 .h_logo a {
@@ -32,17 +32,21 @@
     height: 588px;
     text-indent: -9999em;
 }
+
 .nf-intro {
     padding: 10px;
 }
+
 .n-footer {
     height: 80px;
     margin-top: -80px;
     text-align: center;
 }
+
 div {
     display: block;
 }
+
 p {
     display: block;
     -webkit-margin-before: 1em;
@@ -50,7 +54,10 @@ p {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
-ul, menu, dir {
+
+ul,
+menu,
+dir {
     display: block;
     list-style-type: disc;
     -webkit-margin-before: 1em;
@@ -59,6 +66,7 @@ ul, menu, dir {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
 }
+
 .clearfix:after {
     display: block;
     content: "\20";
@@ -67,21 +75,24 @@ ul, menu, dir {
     overflow: hidden;
     visibility: hidden;
 }
+
 .nf-link-area {
     text-align: center;
 }
+
 .clearfix {
     *zoom: 1;
 }
-#title
-{
-    text-align:center;
+
+#title {
+    text-align: center;
 }
-ul li
-{
-    list-style-type:none;
-    display:inline;
+
+ul li {
+    list-style-type: none;
+    display: inline;
 }
+
 .win_banner_mistore .layout {
     width: 410px;
     min-height: 524px;
@@ -90,6 +101,7 @@ ul li
     font-size: 14px;
     z-index: 4;
 }
+
 .layout {
     background-color: #fff;
     width: 854px;
@@ -98,32 +110,40 @@ ul li
     position: relative;
     min-height: 620px;
 }
+
 body {
     color: #757575;
 }
-.tableWrap-center{
-    margin:auto;
+
+.tableWrap-center {
+    margin: auto;
     padding-left: 40px;
     background: #fff;
     height: 524px;
 }
+
 body {
     font-size: 14px;
-    font-family: arial,"Hiragino Sans GB", "Microsoft YaHei","微軟正黑體","儷黑 Pro", sans-serif;
+    font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
 }
+
 .nav_tabs_panel {
     display: none;
 }
+
 .win_banner_mistore .nav_tabs_panel {
     display: block;
 }
+
 .nav_tabs_panel {
     display: none;
 }
+
 .wrap {
     overflow: hidden;
     position: fixed;
 }
+
 .flagLeft a:link {
     text-decoration: none;
     color: lightgray;
@@ -215,6 +235,7 @@ body {
     top: -10px;
     z-index: 2;
 }
+
 .Weibo {
     position: absolute;
     text-align: center;
@@ -224,7 +245,9 @@ body {
     top: 50px;
     z-index: 3;
 }
-.h_panel, .login_banner {
+
+.h_panel,
+.login_banner {
     width: 1130px;
     margin: 0 auto;
 }
@@ -238,6 +261,7 @@ body {
     top: 90px;
     z-index: 3;
 }
+
 #flag_Wei .Flag a:link {
     text-decoration: none;
     color: gainsboro;
@@ -269,12 +293,13 @@ body {
     margin-top: -14px;
     font-size: 14px;
 }
+
 /*脚部*/
 .footer {
     background: #fff;
     width: 100%;
     height: 32px;
-    color:black;
+    color: black;
     line-height: 32px;
     letter-spacing: 1px;
     text-align: center;
@@ -282,7 +307,8 @@ body {
     bottom: 0;
     left: 0;
 }
-#list li{
+
+#list li {
 
     list-style: none;
 }
