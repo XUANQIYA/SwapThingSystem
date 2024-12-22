@@ -50,6 +50,7 @@ $(document).ready(function () {
         currentUser = JSON.parse(currentUser);
         // 更新顶部栏
         $("#login").text(currentUser.nickname);
+        $(".login-link").text(currentUser.nickname);
         $("#register").text("消息通知");
         $("#dd").text("个人中心");
         $("#login").attr("href", "Personal_central.html");
