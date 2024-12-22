@@ -32,7 +32,7 @@
 		<div class="navwrap">
 			<div class="exchange-form-container">
 				<h2>发布交换物品</h2>
-				<form action="#" method="POST">
+				<form id="publishForm" action="#" method="POST">
 					<div class="form-group">
 						<label for="itemName">物品名称</label>
 						<input type="text" id="itemName" name="itemName" placeholder="请输入物品名称" required>
@@ -75,7 +75,9 @@
 	<div style="height: 40px;"></div>
 	</div>
 </body>
+
 <script>
+	// 物品图片预览功能
 	document.getElementById('itemImage').addEventListener('change', function (event) {
 		var file = event.target.files[0];
 		var img = document.getElementById('imagePreview');
@@ -91,15 +93,49 @@
 			img.style.display = 'none';  // 如果没有选择文件，隐藏图片预览
 		}
 	});
+
+	// 发布表单提交事件
+	document.getElementById('publishForm').addEventListener('submit', function (event) {
+		event.preventDefault(); // 阻止表单默认提交行为
+
+		var itemName = document.getElementById('itemName').value;
+		var itemDescription = document.getElementById('itemDescription').value;
+		var category = document.getElementById('category').value;
+		var itemImage = document.getElementById('itemImage').files[0];
+
+		// 检查必填字段是否填写
+		if (itemName && itemDescription && itemImage) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				// 存储数据
+				var itemData = {
+					name: itemName,
+					description: itemDescription,
+					category: category,
+					image: e.target.result
+				};
+
+				// 使用 sessionStorage 保存数据
+				sessionStorage.setItem('newItem', JSON.stringify(itemData));
+
+				// 跳转到发布页面
+				window.location.href = './wodefabu.html';
+			};
+			reader.readAsDataURL(itemImage); // 读取图片文件
+		} else {
+			alert('请填写物品名称、描述和上传图片');
+		}
+	});
+
 	layui.use('carousel', function () {
 		var carousel = layui.carousel;
-		//建造实例
+		// 创建轮播实例
 		carousel.render({
-			elem: '#home-carousel'
-			, width: '100%' //设置容器宽度
-			, height: '460px'
-			, arrow: 'always' //始终显示箭头
-			//,anim: 'updown' //切换动画方式
+			elem: '#home-carousel',
+			width: '100%', // 设置容器宽度
+			height: '460px', // 设置容器高度
+			arrow: 'always', // 始终显示箭头
+			// anim: 'updown' // 切换动画方式
 		});
 	});
 </script>

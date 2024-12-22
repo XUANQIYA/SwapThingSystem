@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>我的发布</title>
+    <link rel="icon" href="./img/小米手机/logo-footer.png" type="image/gif">
+	<link rel="stylesheet" href="css/layui/css/layui.css">
+	<link href="css/jyc.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<script src="css/layui/layui.js"></script>
+	<script src="js/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jyc.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/jyc.css">
+    <link href="./css/pt.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="topbar">
+            <div class="wrap">
+                <div class="topbar-left">
+                    <a>闲置物品交换分析平台</a><span>|</span>
+                </div>
+                <div class="topbar-right">
+                    <a href="./Account.html" id="login">登录</a><span>|</span>
+                    <a href="./miregister.html" id="register">注册</a><span>|</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!--主体-->
+    <div class="main">
+        <div class="wrap" style="height: 14px;"></div>
+        <div class="wrap product-2">
+            <h2>我的发布</h2>
+            <div id="productList"></div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 修改这里以匹配你存储的键名
+    var productData = sessionStorage.getItem('newItem'); 
+    console.log('Product Data:', productData); // Debug: Check if data exists
+    if (productData) {
+        productData = JSON.parse(productData);
+
+        // 获取 productList 容器
+        var productList = document.getElementById('productList');
+        console.log('Product List Element:', productList); // Debug: Check if productList element is found
+
+        if (productList) {
+            // 创建商品展示的 div
+            var productDiv = document.createElement('div');
+            productDiv.classList.add('product-2-left', 'shadow');
+
+            // 创建图片元素
+            var img = document.createElement('img');
+            img.src = productData.image;
+
+            // 创建内容部分
+            var contentDiv = document.createElement('div');
+            contentDiv.classList.add('content');
+            var h1 = document.createElement('h1');
+            h1.textContent = productData.name;
+            contentDiv.appendChild(h1);
+
+            // 组合 div
+            productDiv.appendChild(img);
+            productDiv.appendChild(contentDiv);
+
+            // 将商品添加到页面
+            productList.appendChild(productDiv);
+
+            // 清除 sessionStorage 中的商品数据，以避免重复加载
+            sessionStorage.removeItem('newItem');
+        } else {
+            console.error('productList 元素未找到');
+        }
+    } else {
+        console.log('No product data found in sessionStorage');
+    }
+});
+        layui.use('carousel', function () {
+            var carousel = layui.carousel;
+            //建造实例
+            carousel.render({
+                elem: '#carouse'
+                , width: '100%' //设置容器宽度
+                , height: '620px'
+                , arrow: 'always' //始终显示箭头
+                //,anim: 'updown' //切换动画方式
+
+            });
+        });
+    </script>
+</body>
+
+</html>
+<!-- <div class="product-2-left shadow">
+    <a>
+        <img src="./img/小米电视盒子图集/小米电视4A%2055英寸.jpg" />
+        <div class="content">
+            <h1>小米电视4A 55英寸</h1>
+        </div>
+    </a>
+</div>
+<div class="product-2-left shadow">
+    <a>
+        <img src="./img/小米电视盒子图集/小米电视4A%2055英寸.jpg" />
+        <div class="content">
+            <h1>小米电视4A 55英寸</h1>
+        </div>
+    </a>
+</div> -->
