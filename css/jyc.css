@@ -659,3 +659,8 @@ a:hover {
     cursor: pointer;
     border-radius: 0 32px 32px 0; 
 }
+
+a {
+    color: #000; /* 黑色 */
+    text-decoration: none;
+}
