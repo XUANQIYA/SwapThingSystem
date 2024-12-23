@@ -31,6 +31,46 @@
             </div>
         </div>
     </div>
+    <div class="nav wrap">
+        <div class="nav-logo" style="background-color: transparent">
+            <a href="index.html">
+                <img src="img/小米手机/logo-footer.png">
+            </a>
+        </div>
+        <div class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-category" id="nav-all" onmouseover="navallOver()" onmouseout="navallOut()">
+                    <a>全部交换分类</a>
+                </li>
+                <li class="nav-item" id="phone">
+                    <a href="/">首页</a>
+                </li>
+                <li class="nav-item" id="hongmi">
+                    <a href="./views/mobilephone.html">数码</a>
+                </li>
+                <li class="nav-item" id="tv">
+                    <a href="./views/TV.html">服饰</a>
+                </li>
+                <li class="nav-item" id="computer">
+                    <a href="./views/computer.html">书籍</a>
+                </li>
+                <li class="nav-item" id="hezi">
+                    <a href="./views/Smart_Appliances.html">家居用品</a>
+                </li>
+                <li class="nav-item" id="news">
+                    <a href="./views/Healthy_home.html">运动器材</a>
+                </li>
+                <li class="nav-item" id="router">
+                    <a href="./views/Travel_children.html">手工艺品</a>
+                </li>
+                <li class="nav-item" id="hard">
+                    <a href="./views/Router.html">物品玩具</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./views/power.html">工具</a>
+                </li>
+            </ul>
+        </div>
     <div class="clear"></div>
     <!--主体-->
     <div class="main">
@@ -43,47 +83,45 @@
     </div>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 修改这里以匹配你存储的键名
-    var productData = sessionStorage.getItem('newItem'); 
-    console.log('Product Data:', productData); // Debug: Check if data exists
-    if (productData) {
-        productData = JSON.parse(productData);
+document.addEventListener('DOMContentLoaded', function () {
+    // 获取存储的商品数据数组
+    let productArray = JSON.parse(localStorage.getItem('products')) || [];
 
-        // 获取 productList 容器
-        var productList = document.getElementById('productList');
-        console.log('Product List Element:', productList); // Debug: Check if productList element is found
+    // 获取用于展示商品的容器
+    var productList = document.getElementById('productList');
 
-        if (productList) {
-            // 创建商品展示的 div
+    if (productList) {
+        // 遍历商品数组并创建每个商品的展示内容
+        productArray.forEach(function (productData) {
+            // 创建展示商品的 div
             var productDiv = document.createElement('div');
             productDiv.classList.add('product-2-left', 'shadow');
 
-            // 创建图片元素
+            // 创建商品图片
             var img = document.createElement('img');
-            img.src = productData.image;
+            img.src = productData.image; // 设置图片来源
 
-            // 创建内容部分
+            // 创建商品内容部分
             var contentDiv = document.createElement('div');
             contentDiv.classList.add('content');
+
+            // 商品名称
             var h1 = document.createElement('h1');
             h1.textContent = productData.name;
+
+
+            // 将内容添加到内容部分
             contentDiv.appendChild(h1);
 
-            // 组合 div
+            // 将图片和内容部分组合成一个商品 div
             productDiv.appendChild(img);
             productDiv.appendChild(contentDiv);
 
-            // 将商品添加到页面
+            // 将商品添加到页面中的产品列表容器
             productList.appendChild(productDiv);
-
-            // 清除 sessionStorage 中的商品数据，以避免重复加载
-            sessionStorage.removeItem('newItem');
-        } else {
-            console.error('productList 元素未找到');
-        }
+        });
     } else {
-        console.log('No product data found in sessionStorage');
+        console.error('productList 元素未找到');
     }
 });
         layui.use('carousel', function () {

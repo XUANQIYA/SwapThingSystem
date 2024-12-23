@@ -96,37 +96,42 @@
 
 	// 发布表单提交事件
 	document.getElementById('publishForm').addEventListener('submit', function (event) {
-		event.preventDefault(); // 阻止表单默认提交行为
+    event.preventDefault(); // 阻止表单默认提交行为
 
-		var itemName = document.getElementById('itemName').value;
-		var itemDescription = document.getElementById('itemDescription').value;
-		var category = document.getElementById('category').value;
-		var itemImage = document.getElementById('itemImage').files[0];
+    var itemName = document.getElementById('itemName').value;
+    var itemDescription = document.getElementById('itemDescription').value;
+    var category = document.getElementById('category').value;
+    var itemImage = document.getElementById('itemImage').files[0];
 
-		// 检查必填字段是否填写
-		if (itemName && itemDescription && itemImage) {
-			var reader = new FileReader();
-			reader.onload = function (e) {
-				// 存储数据
-				var itemData = {
-					name: itemName,
-					description: itemDescription,
-					category: category,
-					image: e.target.result
-				};
+    // 检查必填字段是否填写
+    if (itemName && itemDescription && itemImage) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            // 构建商品数据对象
+            var itemData = {
+                name: itemName,
+                description: itemDescription,
+                category: category,
+                image: e.target.result
+            };
 
-				// 使用 sessionStorage 保存数据
-				sessionStorage.setItem('newItem', JSON.stringify(itemData));
+            // 获取当前存储的商品数组，如果没有，则初始化为空数组
+            var productArray = JSON.parse(localStorage.getItem('products')) || [];
 
-				// 跳转到发布页面
-				window.location.href = './wodefabu.html';
-			};
-			reader.readAsDataURL(itemImage); // 读取图片文件
-		} else {
-			alert('请填写物品名称、描述和上传图片');
-		}
-	});
+            // 将新商品添加到商品数组
+            productArray.push(itemData);
 
+            // 保存更新后的商品数组到 localStorage
+            localStorage.setItem('products', JSON.stringify(productArray));
+
+            // 跳转到发布页面
+            window.location.href = './wodefabu.html';
+        };
+        reader.readAsDataURL(itemImage); // 读取图片文件
+    } else {
+        alert('请填写物品名称、描述和上传图片');
+    }
+});
 	layui.use('carousel', function () {
 		var carousel = layui.carousel;
 		// 创建轮播实例
