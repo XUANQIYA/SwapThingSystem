@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // index.html 页面加载完成后执行的代码
 $(document).ready(function () {
-    // 检查登录状态
     var isLoggedIn = localStorage.getItem('isLoggedIn');
     var currentUser = localStorage.getItem('currentUser');
 
@@ -55,6 +54,12 @@ $(document).ready(function () {
         $("#dd").text("个人中心");
         $("#login").attr("href", "Personal_central.html");
         $("#register").attr("href", "xiaoxi.html");
+
+        // 为退出登录链接绑定事件
+        $("#logout-link").click(function (e) {
+            e.preventDefault(); // 阻止默认的链接跳转行为
+            logout();
+        });
     }
 });
 
