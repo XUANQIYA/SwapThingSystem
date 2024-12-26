@@ -46,6 +46,7 @@ $(document).ready(function () {
     var isLoggedIn = localStorage.getItem('isLoggedIn');
     var currentUser = localStorage.getItem('currentUser');
 
+    $("#publish-link, #publish-link + span").hide();
     if (isLoggedIn === 'true' && currentUser) {
         currentUser = JSON.parse(currentUser);
         // 更新顶部栏
@@ -54,6 +55,8 @@ $(document).ready(function () {
         $("#dd").text("个人中心");
         $("#login").attr("href", "views/Personal_central.html");
         $("#register").attr("href", "views/xiaoxi.html");
+
+        $("#publish-link, #publish-link + span").show();
     }
 });
 
